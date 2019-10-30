@@ -1,13 +1,25 @@
 <mat-toolbar color="primary" class="HeaderToolBar">
-    <div class="LogoImage">
-        <img src="../../../assets/image/logo.png" alt="Crazy Imagine" title="Crazy Imagine">
-        <div class="LogoTitle">
-            <h1>Crazy Imagine</h1>
+
+        <div class="LogoImage">
+            <img src="../../../assets/image/logo.png" alt="Crazy Imagine" title="Crazy Imagine">
+            <div class="LogoTitle">
+                <h1>Crazy Imagine</h1>
+            </div>
         </div>
-    </div>
-    <nav clasS="NavBar">
-        <button (click)="changeActive(0)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===0}" mat-button >Aleatorio</button>
-        <button (click)="changeActive(1)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===1}" mat-button >Manual</button>
-        <button (click)="changeActive(2)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===2}" mat-button >Dictador ON</button>
-    </nav>
+        <nav clasS="NavBar" fxShow="true" fxHide.lt-md="true">
+            <button (click)="changeActive(0)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===0}"
+                mat-button>Aleatorio</button>
+            <button (click)="changeActive(1)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===1}"
+                mat-button>Manual</button>
+            <button (click)="changeActive(2)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===2}"
+                mat-button>Dictador ON</button>
+        </nav>
+
+        <div fxShow="true" fxHide.gt-sm="true">
+            <button mat-button mat-icon-button mat-raised-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+        </div>
 </mat-toolbar>

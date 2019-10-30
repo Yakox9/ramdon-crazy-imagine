@@ -22,12 +22,13 @@
 }
 
 .LogoImage img{
-    height: 100%;
-    width: 10%;
+    height: 60px;
+    width: 60px;
 }
 
 .NavBar{
     padding: 0px 10px;
+
     width: 30%;
     display: flex;
     justify-content: space-between;
@@ -53,4 +54,13 @@
     width: 80%;
     left: 10%;
     bottom: 0;
+}
+
+
+.divPrueba{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
