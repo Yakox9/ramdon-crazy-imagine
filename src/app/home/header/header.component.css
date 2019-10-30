@@ -1,0 +1,56 @@
+.HeaderToolBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.LogoImage{
+    height:100%;
+    color:white;
+    width: 60%;
+    display: flex;
+
+}
+.LogoTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LogoTitle h1{
+    font-size: 30px;
+}
+
+.LogoImage img{
+    height: 100%;
+    width: 10%;
+}
+
+.NavBar{
+    padding: 0px 10px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.NavBar .NavButton{
+    width: 30%;
+    color:lightgrey;
+    position: relative;
+}
+
+.NavBar .isActive{
+
+    color: white;
+}
+
+.NavBar .isActive::after{
+    content: "";
+    background: #024384;
+    position: absolute;
+    height: 4px;
+    width: 80%;
+    left: 10%;
+    bottom: 0;
+}

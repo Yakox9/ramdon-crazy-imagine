@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="HeaderToolBar">
+    <div class="LogoImage">
+        <img src="../../../assets/image/logo.png" alt="Crazy Imagine" title="Crazy Imagine">
+        <div class="LogoTitle">
+            <h1>Crazy Imagine</h1>
+        </div>
+    </div>
+    <nav clasS="NavBar">
+        <button (click)="changeActive(0)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===0}" mat-button >Aleatorio</button>
+        <button (click)="changeActive(1)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===1}" mat-button >Manual</button>
+        <button (click)="changeActive(2)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===2}" mat-button >Dictador ON</button>
+    </nav>
+</mat-toolbar>
