@@ -16,10 +16,15 @@
         </nav>
 
         <div fxShow="true" fxHide.gt-sm="true">
-            <button mat-button mat-icon-button mat-raised-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+            <button mat-button mat-icon-button mat-raised-button [matMenuTriggerFor]="menu"><mat-icon color="primary">menu</mat-icon></button>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>Item 1</button>
-                <button mat-menu-item>Item 2</button>
+                <button (click)="changeActive(0)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===0}"
+                mat-menu-item>Aleatorio</button>
+                <button (click)="changeActive(1)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===1}"
+                mat-menu-item>Manual</button>
+                <button (click)="changeActive(2)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===2}"
+                mat-menu-item>Dictador ON</button>
             </mat-menu>
         </div>
 </mat-toolbar>
+

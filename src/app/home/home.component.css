@@ -1,0 +1,36 @@
+.MainContent{
+    height: 87%;
+    width: 97%;
+    padding: 0px 15px;
+}
+
+
+.MainContent .ListEmployee{
+    width: 25%;
+    height: 100%;
+}
+
+
+.tagMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+
+}
+
+.tagMenu button{
+    background: #024384;
+    color: white;
+    margin-right: 10px;
+}
+
+.tagMenu h2{
+    margin: 0;
+    padding-left: 10px;
+}
+
+.sinEmpleados{
+    text-align: center;
+    color: #024384 ;
+}

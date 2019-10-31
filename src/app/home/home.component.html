@@ -1,6 +1,25 @@
 <header>
-    <rci-header></rci-header>
+    <rci-header (emitActive)="procesEmiter($event)"></rci-header>
 </header>
-<!--<main class="MainContent">
-    <rci-employee></rci-employee>
-</main>-->
+<main class="MainContent">
+    <div class="ListEmployee" *ngIf="cantEmployee>0">
+        <div class="tagMenu">
+            <h2>Afortunados</h2>
+            <button mat-button mat-icon-button mat-raised-button><mat-icon>add</mat-icon></button>
+        </div>
+        <mat-divider></mat-divider>
+        <rci-employee *ngFor="let employee of employees" [emp]="employee"></rci-employee>
+    </div>
+    <div class="ListEmployee" *ngIf="cantEmployee===0">
+        <div class="tagMenu">
+            <h2>Afortunados</h2>
+            <button mat-button mat-icon-button mat-raised-button><mat-icon>add</mat-icon></button>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="sinEmpleados">
+            <h4>No hay Empleados!</h4>
+        </div>
+    </div>
+    <div class="RamdonContent">
+    </div>
+</main>

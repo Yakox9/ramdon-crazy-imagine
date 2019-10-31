@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'rci-header',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   private WhoIsActive: Number=0;
-
+  @Output() private emitActive = new EventEmitter<Number>();
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
   changeActive(isActive: Number){
     this.WhoIsActive=isActive;
+    this.emitActive.emit(this.WhoIsActive);
   }
 
 }

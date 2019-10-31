@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Employee } from 'src/app/interface/employee';
 
 @Component({
   selector: 'rci-employee',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
+  @Input() private emp:Employee;
 
-  ngOnInit() {
+
+  constructor() { 
   }
 
+  ngOnInit() {
+    this.updateURL();
+  }
+
+  updateURL(){
+    this.emp.url=`../../../assets/image/${this.emp.url}.jpg`;
+  }
 }
