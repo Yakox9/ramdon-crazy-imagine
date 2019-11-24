@@ -9,6 +9,10 @@ import { HeaderComponent } from './home/header/header.component';
 import { EmployeeComponent } from './home/employee/employee.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { AngularFireDatabaseModule} from 'angularfire2/database';
+import {AngularFireModule} from 'angularfire2';
+import {environment} from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    environment
   ],
   providers: [],
   bootstrap: [AppComponent]
