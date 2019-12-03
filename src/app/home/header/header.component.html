@@ -6,9 +6,8 @@
                 <h1>Crazy Imagine</h1>
             </div>
         </div>
-        <nav clasS="NavBar" fxShow="true" fxHide.lt-md="true">
-            <button (click)="changeActive(0)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===0}"
-                mat-button>Aleatorio</button>
+        <nav class="NavBar" fxShow="true" fxHide.lt-md="true">
+            
             <button (click)="changeActive(1)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===1}"
                 mat-button>Manual</button>
             <button (click)="changeActive(2)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===2}"

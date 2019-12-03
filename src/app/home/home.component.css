@@ -2,12 +2,14 @@
     height: 87%;
     width: 97%;
     padding: 0px 15px;
+    display: flex;
 }
 
 
 .MainContent .ListEmployee{
     width: 25%;
     height: 100%;
+    overflow-y: scroll;
 }
 
 
@@ -33,4 +35,23 @@
 .sinEmpleados{
     text-align: center;
     color: #024384 ;
+}
+
+.RamdonContent{
+    width: 80%;
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.1) url("../../assets/image/logo.png") no-repeat; background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RamdonContent .buttonRandom{
+    background: lightgray;
+    color: #024384;
+    font-size: 38px;
+    font-weight: bold;
+    height: 100px;
+    border: 1px solid #024384;
+    
 }
