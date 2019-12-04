@@ -6,7 +6,7 @@ import { Component, OnInit , Output, EventEmitter} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  private WhoIsActive: Number=0;
+  private WhoIsActive: Number=1;
   @Output() private emitActive = new EventEmitter<Number>();
   constructor() { }
 

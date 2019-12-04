@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   private employees:Employee [];
   private cantEmployee: number=0;
   private whoIsActive:number=0;
-  
+  private randomOn:number=0;
 
   constructor(private employeeProvider:EmployeeService) { }
 
@@ -27,9 +27,8 @@ export class HomeComponent implements OnInit {
 
   procesEmiter(event){
     this.whoIsActive=event;
-    if(this.whoIsActive===0){
-      this.generateRamdonNumber();
-    }else{
+    if(this.whoIsActive===1){
+      this.randomOn=0;
       this.generateStaticNumber();
     }
   }
@@ -52,9 +51,22 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  activeRandom(){
+    this.randomOn=1;
+    this.generateRamdonNumber();
+
+    
+  }
+
+ async getValue(value){
+    setTimeout(() => {
+      
+    }, 10);
+    return value;
+  }
   generateStaticNumber(){
     for (let index = 0; index < this.employees.length; index++) {
-      this.employees[index].value=index+1;
+      this.employees[index].value=0;
     }
   }
 }

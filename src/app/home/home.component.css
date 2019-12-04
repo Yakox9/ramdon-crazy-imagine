@@ -12,6 +12,13 @@
     overflow-y: scroll;
 }
 
+.disabledItem{
+    width: 0% !important;
+}
+
+.updateItem{
+    width: 100% !important;
+}
 
 .tagMenu{
     display: flex;
@@ -54,4 +61,78 @@
     height: 100px;
     border: 1px solid #024384;
     
+}
+
+.employeeItem{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 2s ;
+}
+
+.dos{
+    top: 15%;
+    left: 10%;
+    transition: all 2s ;
+}
+
+.uno{
+    top: 10%;
+    left:40%;
+}
+
+.tres{
+    top: 15%;
+    left:70%;
+}
+
+.cuatro{
+    top: 28%;
+    left: 5%;
+}
+
+.cinco{
+    top: 28%;
+    left: 72%;
+}
+
+.seis{
+    top: 43%;
+    left: 3%;
+}
+
+.siete{
+    top: 43%;
+    left: 75%;
+}
+.ocho{
+    top: 60%;
+    left: 5%;
+}
+.nueve{
+    top: 60%;
+    left: 72%;
+}
+
+.diez{
+    top: 75%;
+    left: 8%;
+}
+
+.once{
+    top: 75%;
+    left: 40%;
+}
+.doce{
+    top: 75%;
+    left: 70%;
+}
+.trece{
+    top: 88%;
+    left: 25%;
+}
+
+.catorce{
+    top: 88%;
+    left: 50%;
 }

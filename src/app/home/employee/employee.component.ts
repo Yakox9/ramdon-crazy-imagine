@@ -19,6 +19,7 @@ export class EmployeeComponent implements OnInit {
   }
 
   updateURL(){
-    this.emp.url=`../../../assets/image/${this.emp.url}.jpg`;
+    if(this.emp.url.length<3)
+      this.emp.url=`../../../assets/image/${this.emp.url}.jpg`;
   }
 }

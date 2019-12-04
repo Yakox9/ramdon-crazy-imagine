@@ -1,15 +1,15 @@
 <header>
     <rci-header (emitActive)="procesEmiter($event)"></rci-header>
 </header>
-<main class="MainContent">
-    <div class="ListEmployee" *ngIf="cantEmployee>0">
+<main class="MainContent animated rotateIn">
+    <div class="ListEmployee" [ngClass]="{'disabledItem': randomOn===1}" *ngIf="cantEmployee>0">
         <div class="tagMenu">
             <h2>Afortunados</h2>
         </div>
         <mat-divider></mat-divider>
         <rci-employee *ngFor="let employee of employees" [emp]="employee"></rci-employee>
     </div>
-    <div class="ListEmployee" *ngIf="cantEmployee===0">
+    <div class="ListEmployee" [ngClass]="{'disabledItem': randomOn===1}" *ngIf="cantEmployee===0">
         <div class="tagMenu">
             <h2>Afortunados</h2>
         
@@ -19,7 +19,17 @@
             <h4>No hay Empleados!</h4>
         </div>
     </div>
-    <div class="RamdonContent">
-        <button class="buttonRandom" mat-button mat-raised-button > Generar Aleatorio</button>
+    <div class="RamdonContent animated jello"  [ngClass]="{'updateItem': randomOn===1}">
+        <button *ngIf="randomOn===0" (click)="activeRandom()" class="buttonRandom" mat-button mat-raised-button > Generar Aleatorio</button>
+        <div *ngIf="randomOn===1">
+            <rci-employee [ngClass]="{'uno': employee.value===1,'dos': employee.value===2, 
+                                      'tres': employee.value===3,'cuatro': employee.value===4,
+                                      'cinco': employee.value===5,'seis': employee.value===6,
+                                      'siete': employee.value===7,'ocho': employee.value===8,
+                                      'nueve': employee.value===9,'diez': employee.value===10,
+                                      'once': employee.value===11,'doce': employee.value===12,
+                                      'trece': employee.value===13,'catorce': employee.value===14}" 
+            class="employeeItem animated zoomIn" *ngFor="let employee of employees" [emp]="employee"></rci-employee>
+        </div>
     </div>
 </main>

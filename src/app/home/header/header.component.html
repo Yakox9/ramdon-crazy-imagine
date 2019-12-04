@@ -17,8 +17,6 @@
         <div fxShow="true" fxHide.gt-sm="true">
             <button mat-button mat-icon-button mat-raised-button [matMenuTriggerFor]="menu"><mat-icon color="primary">menu</mat-icon></button>
             <mat-menu #menu="matMenu">
-                <button (click)="changeActive(0)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===0}"
-                mat-menu-item>Aleatorio</button>
                 <button (click)="changeActive(1)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===1}"
                 mat-menu-item>Manual</button>
                 <button (click)="changeActive(2)" class="NavButton" [ngClass]="{'isActive': WhoIsActive===2}"
